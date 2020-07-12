@@ -14,3 +14,4 @@ v1:
 
 win64 下载地址:https://github.com/hongyangyao/memorandum/blob/dev/out/artifacts/%E9%92%BB%E7%9F%B3.exe
 
+运行需要jre 8 后续考虑将jre集成进去
