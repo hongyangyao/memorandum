@@ -15,27 +15,21 @@ public class MouseUtil {
 
         JMenuItem delMenItem = new JMenuItem();
         delMenItem.setText("删除");
-        delMenItem.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                //该操作需要做的事
-                Table.delRow();
-            }
+        delMenItem.addActionListener(evt -> {
+            //该操作需要做的事
+            Table.delRow();
         });
         JMenuItem topMenItem = new JMenuItem();
         topMenItem.setText("置顶");
-        topMenItem.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                //该操作需要做的事
-                Table.top();
-            }
+        topMenItem.addActionListener(evt -> {
+            //该操作需要做的事
+            Table.top();
         });
         JMenuItem okMenItem = new JMenuItem();
         okMenItem.setText("完成");
-        okMenItem.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                //该操作需要做的事
-                Table.finish();
-            }
+        okMenItem.addActionListener(evt -> {
+            //该操作需要做的事
+            Table.finish();
         });
         m_popupMenu.add(topMenItem);
         m_popupMenu.add(okMenItem);

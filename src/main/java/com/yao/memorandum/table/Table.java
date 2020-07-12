@@ -59,8 +59,14 @@ public class Table extends JTable {
         DefaultTableCellRenderer renderer = alignCenter();
         renderer.setBackground(new Color(0, 191, 255));
         table.getTableHeader().setDefaultRenderer(renderer);
+        //表头不可拖动
+        table .getTableHeader().setReorderingAllowed(false);
+        //列大小不可改变
+        table .getTableHeader().setResizingAllowed(false);
         // 行高
         table.setRowHeight(30);
+        //行间距
+        table.setRowMargin(2);
         // 列宽
         table.getColumnModel().getColumn(0).setPreferredWidth(40);
         table.getColumnModel().getColumn(1).setPreferredWidth(100);
@@ -75,8 +81,11 @@ public class Table extends JTable {
         //启用列选择
         table.setColumnSelectionAllowed(false);
         table.setRowSelectionAllowed(true);
-        //网格设置(width:垂直 height:水平网格)
-        table.setIntercellSpacing(new Dimension(0, 1));
+        //网格设置
+        //水平线不显示
+        table.setShowHorizontalLines(false);
+        //垂直线不显示
+        table.setShowVerticalLines(false);
         //表格添加右键点击事件
         table.addMouseListener(new MouseAdapter() {
             @Override
@@ -112,9 +121,7 @@ public class Table extends JTable {
     }
 
     public static void addRow() {
-        int rowCount = table.getRowCount() + 1;
         Vector<Object> vector = new Vector<>();
-//        vector.add(String.valueOf(rowCount + 1));
         vector.add(IconUtil.getIcon(IconUtil.Icon.DEFAULT));
         vector.add(DateUtil.now());
         vector.add("");
@@ -221,7 +228,7 @@ public class Table extends JTable {
      * Returns the appropriate background color for the given row.
      */
     protected Color colorForRow(int row) {
-        return (row % 2 == 0) ? Color.white : new Color(240, 250, 255);
+        return (row % 2 == 0) ? new Color(255,250,240) : new Color(240, 250, 255);
     }
 
     /**
