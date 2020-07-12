@@ -8,4 +8,5 @@ v1:
   ---------------------------
   ![预览](https://github.com/hongyangyao/memorandum/blob/dev/out/artifacts/%7BC3BD9594-B38A-FB7F-EED1-2B6A1CFE3194%7D.jpg)
 
+下载地址:https://github.com/hongyangyao/memorandum/blob/dev/%E9%92%BB%E7%9F%B3.exe
 
