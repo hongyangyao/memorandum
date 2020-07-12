@@ -7,10 +7,12 @@ import java.net.URL;
 
 public class IconUtil {
 
+    private static final URL app = Path.getClassPath("memo.png");
     private static final URL def = Path.getClassPath("default.png");
     private static final URL top = Path.getClassPath(  "top.png");
     private static final URL finish = Path.getClassPath(  "finish.png");
 
+    private static final ImageIcon APP_ICON = new ImageIcon(app);
     private static final ImageIcon DEF_ICON = new ImageIcon(def);
     private static final ImageIcon TOP_ICON = new ImageIcon(top);
     private static final ImageIcon FINISH_ICON = new ImageIcon(finish);
@@ -20,6 +22,7 @@ public class IconUtil {
     }
 
     public enum Icon {
+        APP(app,APP_ICON),
         DEFAULT(def, DEF_ICON),
         TOP(top, TOP_ICON),
         FINISH(finish, FINISH_ICON);
